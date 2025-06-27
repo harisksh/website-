@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Blog</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.post {
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comments input, .comments textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+.comments button {
+  padding: 8px 16px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-list p {
+  background: #eaeaea;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .post {
+    margin: 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#post1">Post 1</a></li>
+        <li><a href="#post2">Post 2</a></li>
+        <li><a href="#post3">Post 3</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="post1" class="post">
+      <h2>Post One Title</h2>
+      <p class="date">Published on: June 20, 2025</p>
+      <img src="https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_640.jpg" alt="Post One Image">
+      <p>This is the content of the first blog post.</p>
+      <div class="comments">
+        <h3>Leave a Comment</h3>
+        <form onsubmit="addComment(event, 'comments1')">
+          <input type="text" placeholder="Your Name" required>
+          <textarea placeholder="Your Comment" required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+        <div id="comments1" class="comment-list"></div>
+      </div>
+    </section>
+
+    <section id="post2" class="post">
+      <h2>Post Two Title</h2>
+      <p class="date">Published on: June 22, 2025</p>
+      <img src="https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_640.jpg" alt="Post Two Image">
+      <p>This is the content of the second blog post.</p>
+      <div class="comments">
+        <h3>Leave a Comment</h3>
+        <form onsubmit="addComment(event, 'comments2')">
+          <input type="text" placeholder="Your Name" required>
+          <textarea placeholder="Your Comment" required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+        <div id="comments2" class="comment-list"></div>
+      </div>
+    </section>
+
+    <section id="post3" class="post">
+      <h2>Post Three Title</h2>
+      <p class="date">Published on: June 25, 2025</p>
+      <img src="https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_640.jpg" alt="Post Three Image">
+      <p>This is the content of the third blog post.</p>
+      <div class="comments">
+        <h3>Leave a Comment</h3>
+        <form onsubmit="addComment(event, 'comments3')">
+          <input type="text" placeholder="Your Name" required>
+          <textarea placeholder="Your Comment" required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+        <div id="comments3" class="comment-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Blog</p>
+  </footer>
+
+  <script>
+    function addComment(event, commentBoxId) {
+  event.preventDefault();
+  const form = event.target;
+  const name = form[0].value.trim();
+  const comment = form[1].value.trim();
+
+  if (name && comment) {
+    const commentList = document.getElementById(commentBoxId);
+    const newComment = document.createElement("p");
+    newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+    commentList.appendChild(newComment);
+    form.reset();
+  }
+}
+
+  </script>
+</body>
+</html>
