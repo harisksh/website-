@@ -1,22 +1,28 @@
 # 📝 My Blog Website
 
-A simple and responsive blog website built with **HTML**, **CSS**, and **JavaScript**.  
-It features multiple posts, images, and a working comment section using basic JavaScript.
+A simple and responsive blog website built using **HTML**, **CSS**, and **JavaScript**.  
+It features multiple blog posts with images and a basic comment system.
 
 🌐 **Live Demo**: [Click here to view](https://harisksh.github.io/website/)
 
+---
+
 ## 🚀 Features
 
-- Responsive layout
-- Blog posts with images
-- Comment submission (client-side only)
-- Mobile-friendly navigation
+- Responsive layout  
+- Blog posts with images  
+- Comment submission (client-side only)  
+- Mobile-friendly navigation  
+
+---
 
 ## 🧩 Technologies Used
 
-- HTML5
-- CSS3 (Flexbox)
-- Vanilla JavaScript
+- HTML5  
+- CSS3 (with Flexbox)  
+- Vanilla JavaScript  
+
+---
 
 ## 📷 Screenshot
 
@@ -29,3 +35,4 @@ It features multiple posts, images, and a working comment section using basic Ja
 1. Clone this repository:
    ```bash
    git clone https://github.com/harisksh/website.git
+
