@@ -35,4 +35,3 @@ It features multiple blog posts with images and a basic comment system.
 1. Clone this repository:
    ```bash
    git clone https://github.com/harisksh/website.git
-
